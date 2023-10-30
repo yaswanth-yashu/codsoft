@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+        #calculator {
+            background-color: #9c88ff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px 0px #aaa;
+        }
+        .button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #341f97;
+        }
+        .textview {
+            height:5vh;
+            width: 270px;
+            margin: 5px;
+            font-size: 24px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input class="textview" id="textview">
+        <br>
+        <input class="button" type="button" value="1" onclick="insert('1')">
+        <input class="button" type="button" value="2" onclick="insert('2')">
+        <input class="button" type="button" value="3" onclick="insert('3')">        
+
+        <input class="button" type="button" value="/" onclick="insert('/')">
+        <br>
+        <input class="button" type="button" value="4" onclick="insert('4')">
+        <input class="button" type="button" value="5" onclick="insert('5')">
+        <input class="button" type="button" value="6" onclick="insert('6')">
+        <input class="button" type="button" value="*" onclick="insert('*')">
+        <br>
+        <input class="button" type="button" value="7" onclick="insert('7')">
+        <input class="button" type="button" value="8" onclick="insert('8')">
+        <input class="button" type="button" value="9" onclick="insert('9')">
+        <input class="button" type="button" value="-" onclick="insert('-')">
+        <br>
+        <input class="button" type="button" value="0" onclick="insert('0')">
+        <input class="button" type="button" value="." onclick="insert('.')">
+        <input class="button" type="button" value="=" onclick="equal()">
+        <input class="button" type="button" value="+" onclick="insert('+')">
+        <br>
+        <input class="button" type="button" value="C" onclick="clean()">
+        <input class="button" type="button" value="B" onclick="back()">
+    </div>
+    <script>
+        function insert(num) {
+            document.getElementById('textview').value += num;
+        }
+        function clean() {
+            document.getElementById('textview').value = "";
+        }
+        function back() {
+            var value = document.getElementById('textview').value;
+            document.getElementById('textview').value = value.substring(0, value.length - 1);
+        }
+        function equal() {
+            var value = document.getElementById('textview').value;
+            if (value) {
+                document.getElementById('textview').value = eval(value);
+            }
+        }
+    </script>
+</body>
+</html>

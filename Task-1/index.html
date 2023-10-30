@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+     <title>Landing page</title> 
+    <link rel="stylesheet" href="css/style.css">
+   </head>
+<body>
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#Home">Landing_Page</a>
+        </div>
+          <ul class="nav-links">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Service">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+      </div>
+  </nav>
+  <!-- navbar end -->
+ <!-- Home Section -->
+ <section id="Home">
+    <div class="container">
+      <div class="home_child1 ">
+        <div class="content">
+          <h2><span class="yaswanth">Hello,</span><br>It's Me Yash</h2>
+          <p class="home_matter">I'm A Web Developer & Designer. I Will Make Your Project Beautiful And Attractive, You Can Find Me On linkedin.</p>
+        </div>
+        <div class="link">
+          <a href="https://www.linkedin.com/in/yaswanthd/" class="click" target="_blank">linkedin</a>
+        </div>
+    </div>  
+  </section>
+  <!-- Home Section end -->
+  <!-- About Section -->
+  <section id="About">
+    <div class="about_container">
+      <div class="about_child1">
+        <div class="aboutme">
+          <div class="about_text">About Me</div>
+          <p class="aboutme">Hello there! I'm a curious mind with a deep love for web technology and a knack for crafting stunning, user-friendly digital experiences. You can call me a digital explorer, always on the lookout for the latest web innovations and trends. Building websites is my canvas, where lines of code blend with vivid design to create seamless online journeys.
+          My world revolves around the delicate dance of aesthetics and functionality, bringing user interfaces to life with a touch of artistry. When I'm not diving into code, you can find me sketching out new ideas or experimenting with color palettes, searching for that perfect blend of beauty and user-friendliness. I'm passionate about the digital realm, and I can't wait to embark on more web adventures and design wonders with you!</p>
+          <div class="link">
+            <a href="#Service" class="click a_click">Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="about_child2">
+        <div class="img"></div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section end -->
+
+  <!-- Service Section -->
+  <section id="Service">
+    <div class="service_container"><a href="#Contact">
+      <div class="wraper1">
+        <a href="#Contact"> <div class="w1_img"></div></a>
+        <div class="wraper_matter">
+          <h1>Website Development</h1>
+          <p> Web developers can create websites from scratch, utilizing programming languages like HTML, CSS, and JavaScript. They may also use web development frameworks and content management systems (CMS) like WordPress, Drupal, or Joomla to streamline the process.</p>
+        </div>
+      </div>
+      <div class="wraper2">
+        <a href="#Contact"><div class="w2_img"></div></a>
+        <div class="wraper_matter">
+          <h1>Web Hosting and Server Management</h1>
+          <p>Developers may provide web hosting services and server management to ensure a website's availability and performance.</p>
+        </div>
+      </div>
+      <div class="wraper3">
+        <a href="#Contact"><div class="w3_img"></div></a>
+        <div class="wraper_matter">
+          <h1>Search Engine Optimization (SEO)</h1>
+          <p>Some web developers are knowledgeable about SEO practices and can optimize websites for better search engine rankings.</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>     
+  <!-- Service Section end -->
+
+  <!-- Contact Section -->
+  <section id="Contact">
+    <div class="container_contact">
+      <div class="contact_child1">
+        <h3 class="contact_text">Contact Me</h3>
+      </div>
+      <div class="contact_child2">
+        <form>
+          <label for="fname">First Name</label><br>
+          <input type="text"  placeholder="Your name"><br><br>
+
+          <label for="lname">Email</label><br>
+          <input type="email" placeholder="Your last email"><br><br>
+
+          <label for="country">Country</label><br>
+          <select id="country" name="country"><br>
+            <option value="australia">India</option>
+            <option value="canada">Europe</option>
+            <option value="usa">America</option>
+          </select>
+
+          <label for="subject">Subject</label><br>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea><br>
+
+          <input type="submit" value="Submit"><br>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section end  -->
+<footer>
+  <p>Copyright © 2023 | A landing page by D.Yaswanth__#codsoft</p>
+</footer>
+<!-- JavaScript -->
+  <script>
+  let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      }else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+
+</body>
+</html>
